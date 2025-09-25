@@ -1,0 +1,39 @@
+{
+  "name": "lendsqr-fe-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173",
+    "generate:mock": "node scripts/generate-mock.js",
+    "mock:server": "json-server --watch mock/db.json --port 4000",
+    "start:all": "concurrently \"npm:mock:server\" \"npm:dev\"",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "@vitejs/plugin-react": "^4.0.0",
+    "concurrently": "^8.2.0",
+    "faker": "^5.5.3",
+    "jsdom": "^27.0.0",
+    "json-server": "^0.17.3",
+    "sass": "^1.70.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.3.0"
+  }
+}
